@@ -1,0 +1,24 @@
+2024-07-21T22:39:23.124-03:00  INFO 15800 --- [restartedMain] c.example.Hotel.EclipseHotelApplication  : Starting EclipseHotelApplication using Java 22.0.1 with PID 15800 (C:\Users\jeanj\OneDrive\Área de Trabalho\Eclipse-HotelJava\target\classes started by jeanj in C:\Users\jeanj\OneDrive\Área de Trabalho\Eclipse-HotelJava)
+2024-07-21T22:39:23.126-03:00  INFO 15800 --- [restartedMain] c.example.Hotel.EclipseHotelApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-07-21T22:39:23.163-03:00  INFO 15800 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-21T22:39:23.163-03:00  INFO 15800 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-21T22:39:23.699-03:00  INFO 15800 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-21T22:39:23.745-03:00  INFO 15800 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 3 JPA repository interfaces.
+2024-07-21T22:39:24.175-03:00  INFO 15800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-21T22:39:24.185-03:00  INFO 15800 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-21T22:39:24.185-03:00  INFO 15800 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-21T22:39:24.224-03:00  INFO 15800 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-21T22:39:24.225-03:00  INFO 15800 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1062 ms
+2024-07-21T22:39:25.520-03:00  INFO 15800 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-21T22:39:25.563-03:00  INFO 15800 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-21T22:39:25.591-03:00  INFO 15800 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-21T22:39:25.822-03:00  INFO 15800 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-21T22:39:27.346-03:00  WARN 15800 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-21T22:39:28.472-03:00  INFO 15800 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-21T22:39:31.636-03:00  INFO 15800 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-21T22:39:31.831-03:00  INFO 15800 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-21T22:39:32.222-03:00  WARN 15800 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-21T22:39:32.512-03:00  INFO 15800 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-21T22:39:32.540-03:00  INFO 15800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-07-21T22:39:32.547-03:00  INFO 15800 --- [restartedMain] c.example.Hotel.EclipseHotelApplication  : Started EclipseHotelApplication in 9.752 seconds (process running for 10.37)
+2024-07-21T22:41:10.477-03:00  INFO 15800 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
