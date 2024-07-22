@@ -1,13 +1,14 @@
-package com.example.Eclipse_HotelJava;
+package com.example.Hotel;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EclipseHotelJavaApplication {
+public class EclipseHotelApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EclipseHotelJavaApplication.class, args);
+		SpringApplication.run(EclipseHotelApplication.class, args);
+
 	}
 
 }
