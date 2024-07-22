@@ -6,11 +6,11 @@ Este projeto é um sistema de reservas de hotel desenvolvido com Spring Boot e P
 * Spring Boot 3.3.2
 * PostgreSQL (Aws Rds)
 * AWS Secrets Manager
-* Configuração do Ambiente
-* Clone o Repositório:
 
 
-## Copiar código
+# Configuração do Ambiente
+
+## Clone o Repositório:
 
 ```
 git clone https://github.com/usuario/nome-do-repositorio.git
