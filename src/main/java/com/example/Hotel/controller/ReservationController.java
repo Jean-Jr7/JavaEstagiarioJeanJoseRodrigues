@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @RestController
 @RequestMapping("/reservations")
@@ -42,6 +43,7 @@ public class ReservationController {
         } catch (Exception e) {
             return new ResponseEntity<>("Erro interno do servidor. Tente novamente mais tarde.", HttpStatus.INTERNAL_SERVER_ERROR);
         }
+
     }
 
     @PutMapping("/{id}/status")
@@ -61,4 +63,17 @@ public class ReservationController {
         List<Reservation> occupiedRooms = reservationService.getCurrentOccupiedRooms();
         return ResponseEntity.ok(occupiedRooms);
     }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteReservation(@PathVariable Long id) {
+        try {
+            reservationService.deleteReservation(id);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } catch (NoSuchElementException e) {
+            return new ResponseEntity<>("Reserva não encontrada", HttpStatus.NOT_FOUND);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<>("Erro interno do servidor. Tente novamente mais tarde.", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
 }

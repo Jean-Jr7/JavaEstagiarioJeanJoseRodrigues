@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @Service
@@ -38,14 +39,12 @@ public class ReservationService {
         Timestamp checkin = reservation.getCheckin();
         Timestamp checkout = reservation.getCheckout();
 
-
         List<Reservation> conflictingReservations = reservationRepository.findByRoomAndStatusNot(room, ReservationStatus.CANCELED);
         for (Reservation existingReservation : conflictingReservations) {
             if (checkin.before(existingReservation.getCheckout()) && checkout.after(existingReservation.getCheckin())) {
                 throw new RoomAlreadyBookedException("O quarto já está reservado para o período solicitado.");
             }
         }
-
         return reservationRepository.save(reservation);
     }
 
@@ -66,4 +65,11 @@ public class ReservationService {
     public List<Reservation> getCurrentOccupiedRooms() {
         return reservationRepository.findAllByStatus(ReservationStatus.IN_USE);
     }
+    public void deleteReservation(Long id) {
+        if (!reservationRepository.existsById(id)) {
+            throw new NoSuchElementException("Reserva não encontrada");
+        }
+        reservationRepository.deleteById(id);
+    }
+
 }
