@@ -15,14 +15,13 @@ import java.util.Optional;
 @Service
 public class CustomerService {
 
-    @Autowired
     private final CustomerRepository customerRepository;
-    @Autowired
-    private ReservationRepository reservationRepository;
+    private final ReservationRepository reservationRepository;
 
     @Autowired
-    public CustomerService(CustomerRepository customerRepository) {
+    public CustomerService(CustomerRepository customerRepository, ReservationRepository reservationRepository) {
         this.customerRepository = customerRepository;
+        this.reservationRepository = reservationRepository;
     }
 
     public List<Customer> getAllCustomers() {
@@ -55,5 +54,3 @@ public class CustomerService {
         customerRepository.deleteById(customerId);
     }
 }
-
-
